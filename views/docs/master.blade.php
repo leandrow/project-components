@@ -21,8 +21,9 @@
 
 	<body class="p-5 bg-light">
 		<h3 class="mb-3">Project <small class="text-muted">components</small></h3>
+		<!-- @include('docs/components/btns') -->
 		<?php
-			include 'components/btns.php';
+			include 'components/btns.blade.php';
 		?>
 
 		<script src="../../public/lib/js/docs.js"></script>

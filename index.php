@@ -1,3 +1,4 @@
 <?php
-	include 'views/docs/master.php';
+	// Demo
+	include 'views/docs/master.blade.php';
 ?>
