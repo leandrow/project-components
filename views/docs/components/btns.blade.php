@@ -1,4 +1,5 @@
 <div class="component-box bg-white mb-5">
+	<i class="icon-show-code ev-show-code"></i>
 	<div class="component-item">
 		<button type="button" class="btn btn-sm btn-primary">Button</button>
 	</div>

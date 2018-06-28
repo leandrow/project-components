@@ -49,4 +49,10 @@
 	// Enable tooltips
 	$('[data-toggle="tooltip"]').tooltip();
 
+	// Show code
+	$('.ev-show-code').on('click', function() {
+		var sc = $(this).toggleClass('icon-active');
+		sc.siblings('.code-block').toggle();
+	});
+
 })();
