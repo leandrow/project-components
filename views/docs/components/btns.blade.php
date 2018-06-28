@@ -1,5 +1,5 @@
 <div class="component-box bg-white mb-5">
-	<i class="icon-show-code ev-show-code"></i>
+	<i class="icon-show-code ev-show-code" data-toggle="tooltip" data-placement="top" title="Code"></i>
 	<div class="component-item">
 		<button type="button" class="btn btn-sm btn-primary">Button</button>
 	</div>
