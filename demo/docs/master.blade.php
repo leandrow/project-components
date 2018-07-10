@@ -8,15 +8,15 @@
 		<title>Components</title>
 		<meta name="description" content="">
 		<link rel="icon" href="" type="image/png">
-		<link rel="stylesheet" href="../../public/lib/css/bootstrap.min.css">
-		<link rel="stylesheet" href="../../public/lib/css/prism.css">
-		<link rel="stylesheet" href="../../public/lib/css/docs.css">
+		<link rel="stylesheet" href="./dist/lib/bootstrap.min.css">
+		<link rel="stylesheet" href="./dist/lib/prism.css">
+		<link rel="stylesheet" href="./dist/assets/docs.css">
 
-		<script src="../../public/lib/js/jquery.min.js"></script>
-		<script src="../../public/lib/js/popper.min.js"></script>
-		<script src="../../public/lib/js/bootstrap.min.js"></script>
-		<script src="../../public/lib/js/prism.js"></script>
-		<script src="../../public/lib/js/clipboard.min.js"></script>
+		<script src="./dist/lib/jquery.min.js"></script>
+		<script src="./dist/lib/popper.min.js"></script>
+		<script src="./dist/lib/bootstrap.min.js"></script>
+		<script src="./dist/lib/prism.js"></script>
+		<script src="./dist/lib/clipboard.min.js"></script>
 	</head>
 
 	<body class="p-5 bg-light">
@@ -26,6 +26,6 @@
 			include 'components/btns.blade.php';
 		?>
 
-		<script src="../../public/lib/js/docs.js"></script>
+		<script src="./dist/assets/docs.js"></script>
 	</body>
 </html>
