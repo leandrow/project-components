@@ -19,8 +19,8 @@
 		<script src="./dist/lib/clipboard.min.js"></script>
 	</head>
 
-	<body class="p-5 bg-light">
-		<h3 class="mb-3">Project <small class="text-muted">components</small></h3>
+	<body class="components-group">
+		<h3>Project <small class="text-muted">components</small></h3>
 		<!-- @include('docs/components/btns') -->
 		<?php
 			include 'components/btns.blade.php';
