@@ -6,7 +6,7 @@
 ![Demo](https://user-images.githubusercontent.com/5880063/42570885-ba7f960c-84eb-11e8-90e1-2c8ef30ce122.png "Demo")
 
 ## Install
-Install the component using [npm](https://npmjs.com):
+Install the component using **[npm](https://npmjs.com)**:
 
 ```sh
 $ npm install project-components --save
@@ -14,14 +14,10 @@ $ npm install project-components --save
 
 ## Usage
 
-Include the CSS:
+Include the **CSS/JS**:
 
 ```html
 <link rel="stylesheet" href="./dist/assets/docs.css">
-```
-Include the JS:
-
-```html
 <script src="./dist/assets/docs.js"></script>
 ```
 Adds **docs.js** before the tag ```</body>```.
@@ -35,7 +31,7 @@ Copy the local lib **src/prism** to **dist/lib** and include:
 <script src="./dist/lib/prism.js"></script>
 ```
 
-Include the libs:
+Also include the libs:
 
 * [Jquery](https://jquery.com/download)
 * [Bootstrap 4](http://getbootstrap.com) or v3
@@ -49,7 +45,7 @@ Include the libs:
 
 ## Route
 
-Include in **routes/web.php**:
+Include in **routes/**web.php:
 
 ```php
 Route::view('/components', 'docs/master');
@@ -57,7 +53,7 @@ Route::view('/components', 'docs/master');
 
 ## Example
 
-1. Adds a new component in **docs/components**:
+1. Adds a new component in **docs/components/**
 
 ```html
 <div class="component-box">
@@ -74,7 +70,7 @@ Route::view('/components', 'docs/master');
 **Note:** Don't remove `<!-- -->` in `<code></code>`.
 
 
-2. Include the new component in **docs/master.blade.php**:
+2. Include the new component in **docs/**master.blade.php
 
 ```html
 <body class="components-group">
