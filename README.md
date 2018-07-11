@@ -45,7 +45,7 @@ Also include the libs:
 
 ## Route
 
-Include in **routes/**web.php:
+Include in **routes/web.php**:
 
 ```php
 Route::view('/components', 'docs/master');
@@ -70,7 +70,7 @@ Route::view('/components', 'docs/master');
 **Note:** Don't remove `<!-- -->` in `<code></code>`.
 
 
-2. Include the new component in **docs/**master.blade.php
+2. Include the new component in **docs/master.blade.php**
 
 ```html
 <body class="components-group">
