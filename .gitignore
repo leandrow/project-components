@@ -1,0 +1,7 @@
+/node_modules
+/src
+LICENSE
+README.md
+gulpfile.js
+package.json
+*.lock
