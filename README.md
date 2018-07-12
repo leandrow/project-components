@@ -1,9 +1,7 @@
 # Project components
-> Indicated for projects with Laravel and Bootstrap 4
+> Indicated for projects web with Laravel and Bootstrap 4
 
-### Demo
-
-![Demo](https://user-images.githubusercontent.com/5880063/42570885-ba7f960c-84eb-11e8-90e1-2c8ef30ce122.png "Demo")
+<a href="http://leandrow.github.io/project-components"><img width="720" src="https://user-images.githubusercontent.com/5880063/42570885-ba7f960c-84eb-11e8-90e1-2c8ef30ce122.png" alt="Demo"></a>
 
 ## Install
 Install the component using **[npm](https://npmjs.com)**:
@@ -42,6 +40,20 @@ Also include the libs:
 ## Branches organization
 
 ![Workflow](https://user-images.githubusercontent.com/5880063/42572387-d4948882-84ef-11e8-946a-fd76307fabc3.png)
+
+## In Laravel
+
+Tree:
+
+```
+|
+|-- docs/
+|   |-- components/
+|       |-- btns.blade.php
+|       |-- (...)
+|   |-- master.blade.php
+|
+```
 
 ## Route
 
