@@ -1,30 +1,61 @@
-let gulp     = require('gulp'),
-		stylus   = require('gulp-stylus'),
-		uglify   = require('gulp-uglify'),
-		cleanCSS = require('gulp-clean-css');
+let gulp     	= require('gulp'),
+	stylus   	= require('gulp-stylus'),
+	uglify   	= require('gulp-uglify'),
+	cleanCSS 	= require('gulp-clean-css'),
+	concat 	 	= require('gulp-concat'),
+	rename   	= require('gulp-rename'),
+	browserSync = require('browser-sync').create();
 
-gulp.task('default', function () {
 
-	// CSS
-	gulp.src('node_modules/bootstrap/dist/css/bootstrap.min.css').pipe(gulp.dest('dist/lib'));
-	gulp.src('src/prism/prism.css')
-		.pipe(cleanCSS({compatibility: '*'}))
-		.pipe(gulp.dest('dist/lib'));
-
-	// Stylus
-	gulp.src('src/stylus/docs.styl')
-			.pipe(stylus())
-			.pipe(cleanCSS({compatibility: '*'}))
-			.pipe(gulp.dest('dist/assets'));
-
-	// Js
-	gulp.src('node_modules/jquery/dist/jquery.min.js').pipe(gulp.dest('dist/lib'));
-	gulp.src('node_modules/popper.js/dist/umd/popper.min.js').pipe(gulp.dest('dist/lib'));
-	gulp.src('node_modules/bootstrap/dist/js/bootstrap.min.js').pipe(gulp.dest('dist/lib'));
-	gulp.src('node_modules/clipboard/dist/clipboard.min.js').pipe(gulp.dest('dist/lib'));
-	gulp.src('src/prism/prism.js').pipe(gulp.dest('dist/lib'));
-	gulp.src('src/js/docs.js')
-		.pipe(uglify())
-		.pipe(gulp.dest('dist/assets'));
-
+// Browser Sync
+gulp.task('browserSync', function() {
+  browserSync.init({
+    server: './demo'
+  })
 });
+
+// CSS
+gulp.task('css', function () {
+	return gulp.src('src/stylus/docs.styl')
+		.pipe(stylus({'include css': true}))
+		.pipe(cleanCSS({compatibility: '*'}))
+		.pipe(rename({suffix: ".min"}))
+		.pipe(gulp.dest('dist/assets'))
+		.pipe(gulp.dest('demo/assets'));
+});
+
+// Scripts
+gulp.task('scripts', function () {
+	return gulp.src([
+			'src/js/docs.js',
+			'src/prism/prism.js'
+		])
+		.pipe(uglify())
+		.pipe(concat('docs.min.js'))
+		.pipe(gulp.dest('dist/assets'))
+		.pipe(gulp.dest('demo/assets'));
+});
+
+// Libs
+gulp.task('libs', function () {
+	return gulp.src([
+			'node_modules/bootstrap/dist/css/bootstrap.min.css',
+			'node_modules/jquery/dist/jquery.min.js',
+			'node_modules/popper.js/dist/umd/popper.min.js',
+			'node_modules/bootstrap/dist/js/bootstrap.min.js',
+			'node_modules/clipboard/dist/clipboard.min.js'
+		])
+		.pipe(gulp.dest('demo/lib')),
+	gulp.src('dist/img/*').pipe(gulp.dest('demo/img'));
+});
+
+// Watch
+gulp.task('watch', function () {
+	gulp.watch('src/stylus/*.styl', ['css', browserSync.reload]);
+	gulp.watch('src/js/*.js', ['scripts', browserSync.reload]);
+	gulp.watch('demo/*.html', browserSync.reload);
+});
+
+
+// Tasks
+gulp.task('default', ['browserSync', 'css', 'scripts', 'libs', 'watch']);
