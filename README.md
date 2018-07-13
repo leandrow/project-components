@@ -1,5 +1,5 @@
 # Project components
-> Indicated for projects web with Laravel and Bootstrap 4
+> Page to add the new components created in your web project! Indicated for projects with Bootstrap 4.
 
 <a href="http://leandrow.github.io/project-components"><img width="720" src="https://user-images.githubusercontent.com/5880063/42570885-ba7f960c-84eb-11e8-90e1-2c8ef30ce122.png" alt="Demo"></a>
 
@@ -15,10 +15,11 @@ $ npm install project-components --save
 Include the **CSS/JS**:
 
 ```html
-<link rel="stylesheet" href="/assets/docs.css">
-<script src="/assets/docs.js"></script>
+<link rel="stylesheet" href="/assets/docs.min.css">
+<script src="/assets/docs.min.js"></script>
 ```
-Adds **docs.js** before the tag ```</body>```.
+Adds **docs.min.js** before the tag ```</body>```.  
+Copy the images of **/img** folder.
 
 ## Dependencies
 
@@ -28,8 +29,6 @@ Include the libs:
 * [Bootstrap 4](http://getbootstrap.com) or v3
 * [Popper](https://popper.js.org)
 * [Clipboard](https://clipboardjs.com/)
-
-And copy the images of **/img** folder.
 
 ## Branches organization
 
