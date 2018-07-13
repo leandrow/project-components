@@ -15,27 +15,21 @@ $ npm install project-components --save
 Include the **CSS/JS**:
 
 ```html
-<link rel="stylesheet" href="./dist/assets/docs.css">
-<script src="./dist/assets/docs.js"></script>
+<link rel="stylesheet" href="/assets/docs.css">
+<script src="/assets/docs.js"></script>
 ```
 Adds **docs.js** before the tag ```</body>```.
 
 ## Dependencies
 
-Copy the local lib **src/prism** to **dist/lib** and include:
-
-```html
-<link rel="stylesheet" href="./dist/lib/prism.css">
-<script src="./dist/lib/prism.js"></script>
-```
-
-Also include the libs:
+Include the libs:
 
 * [Jquery](https://jquery.com/download)
 * [Bootstrap 4](http://getbootstrap.com) or v3
 * [Popper](https://popper.js.org)
 * [Clipboard](https://clipboardjs.com/)
 
+And copy the images of **/img** folder.
 
 ## Branches organization
 
@@ -47,11 +41,11 @@ Tree:
 
 ```
 |
-|-- docs/
-|   |-- components/
-|       |-- btns.blade.php
-|       |-- (...)
-|   |-- master.blade.php
+├── docs/
+|   └── components/
+|       ├── btns.blade.php
+|       └── ...
+|   ├── master.blade.php
 |
 ```
 
