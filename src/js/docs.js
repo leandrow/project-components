@@ -47,7 +47,10 @@
 
 
 	// Enable tooltips
-	$('[data-toggle="tooltip"]').tooltip();
+	var tooltips = $('[data-toggle="tooltip"]');
+	if (typeof tooltips.tooltip === 'function') {
+		tooltips.tooltip();
+	}
 
 	// Show code
 	$('.ev-show-code').on('click', function() {
