@@ -62,6 +62,7 @@ Route::view('/components', 'docs/master');
 
 ```html
 <div class="component-box">
+	<p class="component-title text-muted">Title</p>
 	<i class="icon-show-code ev-show-code" data-toggle="tooltip" data-placement="top" title="Code"></i>
 	<div class="component-item">
 		<!-- Component code -->
